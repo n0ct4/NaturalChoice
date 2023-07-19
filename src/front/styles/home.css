@@ -3,6 +3,12 @@
     padding: 0;
 }
 
+body {
+    margin: 0 auto;
+    max-width: 1440px;
+    background: rgb(230, 230, 230);
+}
+
 .jumbotron {
     margin: 20px;
     padding: 20px;
@@ -11,5 +17,7 @@
     justify-content: flex;
     flex-direction: column;
     align-items: flex-end;
-    
+    background-image: url("../img/jumboimg.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
 }

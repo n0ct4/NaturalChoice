@@ -24,12 +24,17 @@ export const Navbar = () => {
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
               <a className="nav-link active" aria-current="page" href="#">
-                Home
+                Conocenos
               </a>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="#">
-                Link
+                Productos
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="#">
+                Ayuda
               </a>
             </li>
             <li className="nav-item dropdown">
@@ -65,15 +70,9 @@ export const Navbar = () => {
             </li>
           </ul>
           <form className="d-flex" role="search">
-            <input
-              className="form-control me-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <button className="btn btn-outline-success" type="submit">
-              Search
-            </button>
+            <div class="search-bar">
+              <input placeholder="Search" type="search" class="input" />
+            </div>
           </form>
         </div>
       </div>
