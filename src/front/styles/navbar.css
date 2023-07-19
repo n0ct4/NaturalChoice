@@ -1,0 +1,19 @@
+.container-fluid{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid gainsboro;
+
+    width: 70%;
+    height: 50px;
+}
+
+.navbar-nav .nav-link {
+    color: black;
+  }
+
+.navbar-brand{
+    color: green;
+    font-weight: 600;
+}
+
