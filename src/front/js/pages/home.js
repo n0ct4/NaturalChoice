@@ -1,45 +1,42 @@
-import React, { useContext } from "react";
+import React from "react";
 import "../../styles/home.css";
+import imgjumbo from "../../img/jumboimg.jpg";
+import imgFamily from "../../img/family-landing.jpg";
+import imgLanding2 from "../../img/imglanding2.jpg"
 
 export const Home = () => {
-
   return (
-    <div class="container">
-  <div class="jumbotron">
-    <h1 class="text-main">Bienvenidos!</h1>
-    <p class="text-second">
-      NaturalChoice es la mejor opción para cuidar de su salud.
-    </p>
-    <p>
-      Encuentre de manera fácil la gran variedad de alimentos que existen con nosotros!
-    </p>
-    <button className="boton-jumbo">Registro</button>
-  </div>
-
-  <div class="info-boxes">
-    <div class="info-box_1">
-      <div class="info-box_text">
-        <div class="info-box_text1">
-          <h4>Por que NaturalChoice?</h4>
-        </div>
-        <div class="info-box_text1">
-          <span>Texto 2</span>
-        </div>
+    <div className="container">
+      {/* Jumbotron */}
+      <div className="jumbotron">
+        <h1 className="display-4">Bienvenidos!</h1>
+        <p className="lead">
+          NaturalChoice es la mejor opción para cuidar de su salud.
+        </p>
+        <p>
+          Encuentre de manera fácil la gran variedad de alimentos que existen con nosotros!
+        </p>
+        <button className="btn btn-primary btn-lg">Registro</button>
       </div>
-    </div>
 
-    <div class="info-box_2">
-      <div class="info-box_text">
-        <div class="info-box_text3">
-          <h4>Beneficios con nosotros</h4>
-        </div>
-        <div class="info-box_text4">
-          <span>Texto 4</span>
+      {/* Info Boxes */}
+      <div className="info-box_main justify-content-center mt-4">
+  {/* Info Box 1 */}
+    <div className="col-md-10">
+      <div className="info-box card p-3">
+        <div className="info-box_content">
+          <h3 className="card-title">Por qué NaturalChoice?</h3>
+          <br />
+          <p className="card-text">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+            eiusmod tempor incididunt.
+          </p>
+          <img className="card-img" src={imgLanding2} alt="Familia feliz" />
         </div>
       </div>
     </div>
   </div>
-</div>
 
+    </div>
   );
 };
