@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import style from "../../styles/navbar.css";
+import { AiOutlineSearch } from "react-icons/ai"
 
 export const Navbar = () => {
   return (

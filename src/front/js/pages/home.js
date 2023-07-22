@@ -10,18 +10,17 @@ export const Home = () => {
     <p class="text-second">
       NaturalChoice es la mejor opción para cuidar de su salud.
     </p>
-    <br />
     <p>
       Encuentre de manera fácil la gran variedad de alimentos que existen con nosotros!
     </p>
-    <button>Registro</button>
+    <button className="boton-jumbo">Registro</button>
   </div>
 
   <div class="info-boxes">
     <div class="info-box_1">
       <div class="info-box_text">
         <div class="info-box_text1">
-          <span>Texto 1</span>
+          <h4>Por que NaturalChoice?</h4>
         </div>
         <div class="info-box_text1">
           <span>Texto 2</span>
@@ -32,7 +31,7 @@ export const Home = () => {
     <div class="info-box_2">
       <div class="info-box_text">
         <div class="info-box_text3">
-          <span>Texto 3</span>
+          <h4>Beneficios con nosotros</h4>
         </div>
         <div class="info-box_text4">
           <span>Texto 4</span>

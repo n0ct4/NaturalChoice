@@ -12,7 +12,7 @@
   .container {
     display: flex;
     flex-direction: column; 
-    
+    max-width: 1440px;
     margin: 20px;
   }
   
@@ -22,17 +22,34 @@
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    background-color: #bbbbbb;
     background-image: url("../img/jumboimg.jpg");
     background-repeat: no-repeat;
     background-size: contain;
     margin-bottom: 20px; 
+    border-radius: 20px;
+  }
+
+  .text-main,
+  .text-second {
+    margin: 20px;
+    padding-right: 20px;
+  }
+
+  .boton-jumbo {
+    width: 200px;
+    height: 50px;
+    margin: 20px;
+    background-color: #a2a2a2;
+    border-radius: 15px;
   }
 
   .info-box_1,
   .info-box_2 {
     flex: 1;
     padding: 20px;
-    border: 2px solid black;
+    border: 2px solid #243e36;
+    border-radius: 20px;
     width: 100%; 
     margin-bottom: 100px;
   }
