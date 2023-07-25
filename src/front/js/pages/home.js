@@ -3,10 +3,11 @@ import "../../styles/home.css";
 import imgjumbo from "../../img/jumboimg.jpg";
 import imgFamily from "../../img/family-landing.jpg";
 import imgLanding2 from "../../img/imglanding2.jpg"
+import { Link } from "react-router-dom";
 
 export const Home = () => {
   return (
-    <div className="container">
+    <div className="container-landing">
       {/* Jumbotron */}
       <div className="jumbotron">
         <h1 className="display-4">Bienvenidos!</h1>
@@ -16,7 +17,9 @@ export const Home = () => {
         <p>
           Encuentre de manera fácil la gran variedad de alimentos que existen con nosotros!
         </p>
+        <Link to='/register'>
         <button className="btn btn-primary btn-lg">Registro</button>
+        </Link>
       </div>
 
       {/* Info Boxes */}

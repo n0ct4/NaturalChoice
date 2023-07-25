@@ -1,0 +1,15 @@
+.container-register {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    width: 600px;
+    margin: 100px;
+}
+
+.container-login {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    width: 600px;
+    margin: 100px;
+}

@@ -7,9 +7,11 @@ export const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg">
       <div className="d-flex container-fluid justify-content-center">
-        <a className="navbar-brand" href="#">
+        <Link to="/">
+        <h1 className="navbar-brand">
           NaturalChoice
-        </a>
+        </h1>
+        </Link>
         <button
           className="navbar-toggler"
           type="button"
