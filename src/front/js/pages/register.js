@@ -12,7 +12,7 @@ export const Register = () => {
         e.preventDefault();
     
         try {
-          const response = await fetch(process.env.BACKEND_URL + "/api/usuario", {
+          const response = await fetch(process.env.BACKEND_URL + "/api/user", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
@@ -22,7 +22,6 @@ export const Register = () => {
     
           if (response.ok) {
             console.log("User created");
-            setMessage('¡Usuario creado con éxito!')
           } else {
             console.error("Error creating user. Maybe you are using an existing email?");
           }
@@ -73,37 +72,7 @@ export const Register = () => {
 
           </form>
     </div>
-    
-    <div className="container-login">
-        <div className="form-head">
-            <h1>Login</h1>
-        </div>
-          <form>
-              <div className="form-group">
-                  <label for="exampleInputEmail1">Email address</label>
-                    <input
-                        type="email"
-                        className="form-control"
-                        id="InputEmail2"
-                        aria-describedby="emailHelp"
-                        placeholder="Enter email" 
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                    />
-              </div>
-              <div className="form-group">
-                  <label for="exampleInputPassword1">Password</label>
-                  <input
-                      type="password"
-                      className="form-control"
-                      id="InputPassword2"
-                      placeholder="Password" />
-              </div>
-              <button type="submit" className="btn btn-primary">
-                  Submit
-              </button>
-          </form>
-    </div>
+
     </>
   );
 };

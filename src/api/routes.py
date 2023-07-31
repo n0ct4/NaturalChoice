@@ -2,7 +2,7 @@
 This module takes care of starting the API Server, Loading the DB and Adding the endpoints
 """
 from flask import Flask, request, jsonify, url_for, Blueprint
-from api.models import db, Usuario
+from api.models import db, User
 from api.utils import generate_sitemap, APIException
 
 api = Blueprint('api', __name__)
@@ -18,7 +18,7 @@ def handle_hello():
     return jsonify(response_body), 200
 
 #USER ---------------------------------------------------------------------------------------------------------
-@api.route('/usario', methods=['GET'])
+@api.route('/user', methods=['GET'])
 def get_usuario():
 
     all_user = User.query.all()
@@ -26,8 +26,8 @@ def get_usuario():
     return jsonify(result), 200
 
 
-@api.route('/usuario/<int:id>', methods=['GET'])
-def get_one_usuario(id):
+@api.route('/user/<int:id>', methods=['GET'])
+def get_one_user(id):
 
     user = User.query.get(id)
     if user:
@@ -36,7 +36,7 @@ def get_one_usuario(id):
         return jsonify({"message": "User not found"}), 404
     
 
-@api.route('/usuario', methods=['POST'])
+@api.route('/user', methods=['POST'])
 def post_usuario():
 
     body = request.get_json()
@@ -45,7 +45,7 @@ def post_usuario():
     email = body['email']
     password = body['password']
 
-    new_user = Usuario(email=email, password=password)
+    new_user = User(email=email, password=password)
 
     db.session.add(new_user)
     db.session.commit()
