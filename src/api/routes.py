@@ -48,9 +48,11 @@ def post_usuario():
     print("AQUÍ ESTÁ EL BODY: ", body)
 
     email = body['email']
+    first_name = body['first_name']
+    last_name = body['last_name']
     password = body['password']
 
-    new_user = User(email=email, password=password)
+    new_user = User(email=email, first_name=first_name, last_name=last_name, password=password)
 
     db.session.add(new_user)
     db.session.commit()
@@ -61,7 +63,7 @@ def post_usuario():
 
 
 #LOGIN USER ---------------------------------------------------------------------------------------------------------
-@api.route('/login', methods=['POST'])
+@api.route('/login-user', methods=['POST'])
 def login():
     # Obtener los datos del usuario desde el cliente
     body = request.get_json()

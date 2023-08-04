@@ -6,6 +6,8 @@ import styles from "../../styles/register.css";
 export const Register = () => {
 
     const [email, setEmail] = useState("");
+    const [first_name, setFirstName] = useState("");
+    const [last_name, setLastName] = useState("");
     const [password, setPassword] = useState("");
 
     const handleSubmit = async (e) => {
@@ -17,7 +19,7 @@ export const Register = () => {
             headers: {
               "Content-Type": "application/json",
             },
-            body: JSON.stringify({ email, password }),
+            body: JSON.stringify({ email, first_name, last_name, password }),
           });
     
           if (response.ok) {
@@ -44,7 +46,6 @@ export const Register = () => {
                         className="form-control"
                         id="InputEmail1"
                         aria-describedby="emailHelp"
-                        placeholder="Enter email" 
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                     />
@@ -52,6 +53,28 @@ export const Register = () => {
                   <spam id="emailHelp" class="form-text text-muted">
                       We'll never share your email with anyone else.
                   </spam>
+              </div>
+
+              <div className="form-group">
+                  <label for="inputFirstName">Name:</label>
+                    <input
+                        type="text"
+                        className="form-control"
+                        id="InputNameRegister"
+                        value={first_name}
+                        onChange={(e) => setFirstName(e.target.value)}
+                    />
+              </div>
+
+              <div className="form-group">
+                  <label for="inputFirstName">Last Name:</label>
+                    <input
+                        type="text"
+                        className="form-control"
+                        id="InputLastNameRegister"
+                        value={last_name}
+                        onChange={(e) => setLastName(e.target.value)}
+                    />
               </div>
 
               <div className="form-group">
@@ -69,7 +92,9 @@ export const Register = () => {
               <button type="submit" className="btn btn-primary">
                   Submit
               </button>
-
+              <Link to='/login'>
+              <h5>Ya estas registrado? Conectate!</h5>
+              </Link>
           </form>
     </div>
 

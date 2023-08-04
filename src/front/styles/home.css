@@ -15,45 +15,7 @@
   color: #333;
 }
 
-.info-box {
-  margin-top: 30px;
-  margin-bottom: 50px;
-  height: auto;
-  width: 80%;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  background-color: white;
-  border: 2px solid #243e36;
-  border-radius: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  color: #333;
-}
 
-.info-box_content {
-  flex: 1; /* El texto ocupará todo el espacio disponible en el contenedor */
-  width: 50%;
-}
-
-.info-box h4 {
-  color: #243e36;
-}
-
-.info-box p {
-  color: #555;
-}
-
-.info-box span {
-  color: #555;
-}
-
-.card-img{
-  width: auto;
-  height: 250px;
-  margin-left: 20px; /* Ajusta el espacio entre el texto y la imagen según tus preferencias */
-  display: flex;
-  justify-content: flex-end;
-}
 
 .boton-jumbo {
   margin-top: 20px;

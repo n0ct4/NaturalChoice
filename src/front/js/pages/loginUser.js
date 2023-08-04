@@ -17,7 +17,7 @@ export const LoginUser = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch(process.env.BACKEND_URL + "/api/login_user", {
+      const response = await fetch(process.env.BACKEND_URL + "/api/login-user", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -37,7 +37,7 @@ export const LoginUser = () => {
         localStorage.setItem("token", token);
         setForm(initialForm);
         setLoginError(false);
-        navigate("/usuario");
+        navigate("/user-view");
       } else {
         const errorData = await response.json();
         setLoginError(true);
